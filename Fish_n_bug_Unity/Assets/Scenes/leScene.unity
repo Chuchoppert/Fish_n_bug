@@ -185,6 +185,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3837328700638849915, guid: 301d88158e7674e44b360418704a8cfa,
+        type: 3}
+      propertyPath: _TypeOfPlat
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3837328700638849915, guid: 301d88158e7674e44b360418704a8cfa,
+        type: 3}
+      propertyPath: _howToActivate
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3837328700638849915, guid: 301d88158e7674e44b360418704a8cfa,
+        type: 3}
+      propertyPath: TagWhoCanActivate
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3837328700638852230, guid: 301d88158e7674e44b360418704a8cfa,
         type: 3}
       propertyPath: m_Name
@@ -192,6 +207,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 301d88158e7674e44b360418704a8cfa, type: 3}
+--- !u!1 &372793947 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3837328700638852230, guid: 301d88158e7674e44b360418704a8cfa,
+    type: 3}
+  m_PrefabInstance: {fileID: 372793946}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &372793948
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 372793947}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe2e1d8d349e50e409b46948444b65ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _howToActivate: 0
+  TagWhoCanActivate: 0
+  _TypeOfPlat: 0
+  TimeToDeactivePlat: 0
+  WasActivated: 0
+  Pos: []
+  TriggerPlat_GO: {fileID: 0}
 --- !u!1001 &383036027
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -253,6 +293,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3837328700638849915, guid: 301d88158e7674e44b360418704a8cfa,
+        type: 3}
+      propertyPath: _TypeOfPlat
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3837328700638849915, guid: 301d88158e7674e44b360418704a8cfa,
+        type: 3}
+      propertyPath: _howToActivate
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3837328700638849915, guid: 301d88158e7674e44b360418704a8cfa,
+        type: 3}
+      propertyPath: TagWhoCanActivate
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3837328700638852230, guid: 301d88158e7674e44b360418704a8cfa,
         type: 3}
@@ -323,6 +378,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3837328700638849915, guid: 301d88158e7674e44b360418704a8cfa,
+        type: 3}
+      propertyPath: _TypeOfPlat
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3837328700638849915, guid: 301d88158e7674e44b360418704a8cfa,
+        type: 3}
+      propertyPath: _howToActivate
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3837328700638849915, guid: 301d88158e7674e44b360418704a8cfa,
+        type: 3}
+      propertyPath: TagWhoCanActivate
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3837328700638852230, guid: 301d88158e7674e44b360418704a8cfa,
         type: 3}
       propertyPath: m_Name
@@ -391,6 +461,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3837328700638849915, guid: 301d88158e7674e44b360418704a8cfa,
+        type: 3}
+      propertyPath: _howToActivate
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3837328700638849915, guid: 301d88158e7674e44b360418704a8cfa,
+        type: 3}
+      propertyPath: TagWhoCanActivate
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3837328700638852230, guid: 301d88158e7674e44b360418704a8cfa,
         type: 3}
@@ -659,6 +739,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3837328700638849915, guid: 301d88158e7674e44b360418704a8cfa,
+        type: 3}
+      propertyPath: _howToActivate
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3837328700638849915, guid: 301d88158e7674e44b360418704a8cfa,
+        type: 3}
+      propertyPath: TagWhoCanActivate
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3837328700638852230, guid: 301d88158e7674e44b360418704a8cfa,
         type: 3}
