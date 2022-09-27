@@ -22,6 +22,7 @@ public enum NameTags
     NoOne,
     Everybody,
     Player,
+    Bug,
     Red_Ob
 }
 

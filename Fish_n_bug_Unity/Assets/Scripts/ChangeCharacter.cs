@@ -9,6 +9,19 @@ public class ChangeCharacter : MonoBehaviour
     [SerializeField] Camera BigCharCam;
     [SerializeField] Camera SmallCharCam;
 
+    private void Start()
+    {
+        BigCharacter.GetComponent<TestMoving>().enabled = true;
+        BigCharacter.GetComponentInChildren<Camera>().enabled = true;
+        BigCharacter.GetComponentInChildren<AudioListener>().enabled = true;
+
+        SmallCharacter.GetComponent<TestMoving>().enabled = false;
+        SmallCharacter.GetComponentInChildren<Camera>().enabled = false;
+        SmallCharacter.GetComponentInChildren<AudioListener>().enabled = false;
+
+
+        BigCharCam = Camera.main;
+    }
     // Update is called once per frame
     void Update()
     {

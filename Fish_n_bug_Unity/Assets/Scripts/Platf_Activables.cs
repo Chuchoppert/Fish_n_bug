@@ -6,14 +6,19 @@ public class Platf_Activables : MonoBehaviour
 {
     [Header("Basic settings")]
     public HowToActivate _howToActivate; //No activable, Player, Objetos 
-    public NameTags TagWhoCanActivate;  //Tag de quien lo pueda activar (
+    public NameTags TagWhoCanActivate;  //Tag de quien lo pueda activar
 
     NameTags saveTag; //Para guardar el tag con el que se va a activar en caso de que se escoga alguno de los objetos
+
+    [Header("Settings color Active/desactivate")]
+    public Color colorOn;
+    public Color colorOff;
 
     [Header("Settings for status Plat")]
     public TypeOfPlat _TypeOfPlat;
     public float TimeToDeactivePlat;
     public bool WasActivated = false;
+    public Activaciones Activaciones_SC;
 
     [Header("Other Settings")]
     public Vector3[] Pos; //0 = no activado, 1 = activado
@@ -22,12 +27,12 @@ public class Platf_Activables : MonoBehaviour
 
     private void Awake()
     {
-        if(_howToActivate == HowToActivate.ActivableByObject)
-        {
+        //if(_howToActivate == HowToActivate.ActivableByObject)
+        //{
             saveTag = TagWhoCanActivate;
-        }
+        //}
 
-        RefreshPlatfTags();
+        //RefreshPlatfTags();
     }
 
     private void OnTriggerEnter(Collider other)
@@ -61,9 +66,10 @@ public class Platf_Activables : MonoBehaviour
             //Anim
             TriggerPlat_GO.transform.localPosition = Pos[1];
 
-            TriggerPlat_GO.GetComponent<MeshRenderer>().material.SetColor("Color_2d523c9e87ea411c87ba7d7b977b62e7", Color.red);
+            TriggerPlat_GO.GetComponent<MeshRenderer>().material.SetColor("Color_2d523c9e87ea411c87ba7d7b977b62e7", colorOn);
             //
 
+            Activaciones_SC.DoAccion();
             WasActivated = true;
         }
         else if (status == false)
@@ -87,15 +93,17 @@ public class Platf_Activables : MonoBehaviour
         //Anim
         TriggerPlat_GO.transform.localPosition = Pos[0];
 
-        TriggerPlat_GO.GetComponent<MeshRenderer>().material.SetColor("Color_2d523c9e87ea411c87ba7d7b977b62e7", Color.black);
+        TriggerPlat_GO.GetComponent<MeshRenderer>().material.SetColor("Color_2d523c9e87ea411c87ba7d7b977b62e7", colorOff);
         //
+
+        Activaciones_SC.DeshasAccion();
 
         WasActivated = false;
     }
 
     public void RefreshPlatfTags()
     {
-        if (_howToActivate == HowToActivate.ActivableByPlayer)
+        /*if (_howToActivate == HowToActivate.ActivableByPlayer)
         {
             TagWhoCanActivate = NameTags.Player;
         }
@@ -104,10 +112,12 @@ public class Platf_Activables : MonoBehaviour
             TagWhoCanActivate = NameTags.NoOne;
         }
         else
-        {
+        {*/
             TagWhoCanActivate = saveTag;
-        }
+        //}
     }
+
+
 }
 
 
